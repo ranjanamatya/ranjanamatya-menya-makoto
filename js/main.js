@@ -138,85 +138,85 @@ window.addEventListener("resize", () => {
 });
 
 /* ... */
-document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll("section[id]");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const navLinks = document.querySelectorAll(".nav-link");
+//   const sections = document.querySelectorAll("section[id]");
 
-  // Scroll to a section smoothly
-  function scrollToSection(id) {
-    const sec = document.getElementById(id);
-    if (!sec) return;
+//   // Scroll to a section smoothly
+//   function scrollToSection(id) {
+//     const sec = document.getElementById(id);
+//     if (!sec) return;
 
-    sec.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
+//     sec.scrollIntoView({
+//       behavior: "smooth",
+//       block: "start",
+//     });
+//   }
 
-  // Mark active link
-  function setActiveLink(sectionId) {
-    navLinks.forEach((link) => {
-      const target = link.dataset.target;
-      link.classList.toggle("active", target === sectionId);
-    });
-  }
+//   // Mark active link
+//   function setActiveLink(sectionId) {
+//     navLinks.forEach((link) => {
+//       const target = link.dataset.target;
+//       link.classList.toggle("active", target === sectionId);
+//     });
+//   }
 
-  // Map pathname (/about, /menu, etc.) to section IDs
-  function pathToSection(pathname) {
-    const slug = pathname.replace(/\/+$/, "").split("/").pop(); // get last part
+//   // Map pathname (/about, /menu, etc.) to section IDs
+//   function pathToSection(pathname) {
+//     const slug = pathname.replace(/\/+$/, "").split("/").pop(); // get last part
 
-    if (!slug || slug === "") return "hero"; // homepage
+//     if (!slug || slug === "") return "hero"; // homepage
 
-    switch (slug) {
-      case "about":
-        return "about";
-      case "menu":
-        return "menu";
-      case "blog":
-        return "blog";
-      case "reservations":
-        return "reservations";
-      case "gallery":
-        return "gallery";
-      case "contact":
-        return "contact";
-      default:
-        return "hero";
-    }
-  }
+//     switch (slug) {
+//       case "about":
+//         return "about";
+//       case "menu":
+//         return "menu";
+//       case "blog":
+//         return "blog";
+//       case "reservations":
+//         return "reservations";
+//       case "gallery":
+//         return "gallery";
+//       case "contact":
+//         return "contact";
+//       default:
+//         return "hero";
+//     }
+//   }
 
-  // Handle nav clicks (no page refresh)
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
+//   // Handle nav clicks (no page refresh)
+//   navLinks.forEach((link) => {
+//     link.addEventListener("click", function (e) {
+//       e.preventDefault();
 
-      const targetSection = this.dataset.target;
-      const targetUrl = this.getAttribute("href");
+//       const targetSection = this.dataset.target;
+//       const targetUrl = this.getAttribute("href");
 
-      // Scroll
-      scrollToSection(targetSection);
+//       // Scroll
+//       scrollToSection(targetSection);
 
-      // Change URL without refreshing
-      history.pushState({ section: targetSection }, "", targetUrl);
+//       // Change URL without refreshing
+//       history.pushState({ section: targetSection }, "", targetUrl);
 
-      // Update active state
-      setActiveLink(targetSection);
-    });
-  });
+//       // Update active state
+//       setActiveLink(targetSection);
+//     });
+//   });
 
-  // Handle back/forward buttons
-  window.addEventListener("popstate", function (e) {
-    const sectionId = e.state?.section || pathToSection(location.pathname);
-    scrollToSection(sectionId);
-    setActiveLink(sectionId);
-  });
+//   // Handle back/forward buttons
+//   window.addEventListener("popstate", function (e) {
+//     const sectionId = e.state?.section || pathToSection(location.pathname);
+//     scrollToSection(sectionId);
+//     setActiveLink(sectionId);
+//   });
 
-  // On first load: go to correct section if URL is /about, /menu, etc.
-  const initialSection = pathToSection(location.pathname);
-  setActiveLink(initialSection);
-  // optional: auto-scroll on load
-  if (initialSection !== "hero") {
-    scrollToSection(initialSection);
-  }
-});
+//   // On first load: go to correct section if URL is /about, /menu, etc.
+//   const initialSection = pathToSection(location.pathname);
+//   setActiveLink(initialSection);
+//   // optional: auto-scroll on load
+//   if (initialSection !== "hero") {
+//     scrollToSection(initialSection);
+//   }
+// });
 /*  */
