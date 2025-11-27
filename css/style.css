@@ -44,6 +44,18 @@ a {
   padding: 18px 0;
 }
 
+.logo {
+  text-align: center;
+  margin-top: 30px;
+}
+.logo a {
+  display: inline-block;
+  text-align: center;
+}
+.logo a img {
+  width: 130px;
+}
+
 .logo-mark {
   width: 36px;
   height: 36px;
