@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menya Makoto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">Ambiance</span>
+        </div>
+        <nav class="main-nav">
+          <ul id="navigation">
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="menu.html" class="nav-link">Menu</a></li>
+            <li>
+              <a href="reservations.html" class="nav-link">Reservations</a>
+            </li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero / Slider -->
+    <section id="hero" class="hero-section">
+      <div class="hero-slider">
+        <!-- Use your own images here -->
+        <div
+          class="hero-slide active"
+          style="
+            background-image: url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1600');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1600&dpr=2');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1600');
+          "
+        ></div>
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Something About Us</h2>
+          <p class="section-subtitle">Our story</p>
+          <p>
+            Ambiance is a contemporary restaurant inspired by classic European
+            bistros. Our team focuses on simple, honest food made with the
+            freshest seasonal produce.
+          </p>
+          <p>
+            From the moment you walk through the door, you are welcomed with
+            warm lighting, carefully curated wines, and a menu that changes with
+            the seasons.
+          </p>
+          <a href="#reservations" class="text-link">Make a reservation →</a>
+        </div>
+        <div class="about-image-wrapper">
+          <div
+            class="about-image main-img"
+            style="
+              background-image: url('https://images.pexels.com/photos/3535383/pexels-photo-3535383.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            "
+          ></div>
+          <div
+            class="about-image secondary-img"
+            style="
+              background-image: url('https://images.pexels.com/photos/3298637/pexels-photo-3298637.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            "
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section menu-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-title">Our Delicious Dishes</h2>
+          <p class="section-subtitle">Dishes & drinks</p>
+        </div>
+
+        <div class="menu-tabs">
+          <button class="menu-tab active" data-menu="starters">Starters</button>
+          <button class="menu-tab" data-menu="mains">Mains</button>
+          <button class="menu-tab" data-menu="desserts">Desserts</button>
+          <button class="menu-tab" data-menu="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-columns">
+          <!-- Starters -->
+          <div class="menu-list active" id="menu-starters">
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Burrata & Heirloom Tomatoes</h3>
+                <span class="menu-price">$22</span>
+              </div>
+              <p class="menu-desc">
+                Extra virgin olive oil, basil, toasted sourdough.
+              </p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Seared Scallops</h3>
+                <span class="menu-price">$26</span>
+              </div>
+              <p class="menu-desc">Cauliflower purée, brown butter, capers.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Truffle Fries</h3>
+                <span class="menu-price">$16</span>
+              </div>
+              <p class="menu-desc">Parmesan, truffle oil, house aioli.</p>
+            </div>
+          </div>
+
+          <!-- Mains -->
+          <div class="menu-list" id="menu-mains">
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Dry-Aged Ribeye</h3>
+                <span class="menu-price">$49</span>
+              </div>
+              <p class="menu-desc">Charred onions, jus, hand-cut chips.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Crispy Skin Salmon</h3>
+                <span class="menu-price">$38</span>
+              </div>
+              <p class="menu-desc">
+                Lemon beurre blanc, greens, crushed potatoes.
+              </p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Wild Mushroom Risotto</h3>
+                <span class="menu-price">$34</span>
+              </div>
+              <p class="menu-desc">Parmesan, thyme, white wine.</p>
+            </div>
+          </div>
+
+          <!-- Desserts -->
+          <div class="menu-list" id="menu-desserts">
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Chocolate Fondant</h3>
+                <span class="menu-price">$18</span>
+              </div>
+              <p class="menu-desc">Vanilla bean ice-cream, hazelnut crumb.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Crème Brûlée</h3>
+                <span class="menu-price">$17</span>
+              </div>
+              <p class="menu-desc">Classic vanilla, brittle caramel top.</p>
+            </div>
+          </div>
+
+          <!-- Drinks -->
+          <div class="menu-list" id="menu-drinks">
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>House Spritz</h3>
+                <span class="menu-price">$16</span>
+              </div>
+              <p class="menu-desc">Aperitif, prosecco, soda, citrus.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Signature Negroni</h3>
+                <span class="menu-price">$19</span>
+              </div>
+              <p class="menu-desc">Gin, vermouth, bitters, orange.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Sommelier’s Wine Selection</h3>
+                <span class="menu-price">From $14</span>
+              </div>
+              <p class="menu-desc">
+                Rotating list of local & international wines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section blog-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-title">Our Stories</h2>
+          <p class="section-subtitle">Written with passion</p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div
+              class="blog-image"
+              style="
+                background-image: url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1600');
+              "
+            ></div>
+            <div class="blog-content">
+              <p class="blog-meta">Chef’s Note · Seasonal Menu</p>
+              <h3>Autumn flavours in the kitchen</h3>
+              <p>
+                Discover how we build our autumn menu around local produce, from
+                squash to wild mushrooms.
+              </p>
+              <a href="#" class="text-link">Read more →</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div
+              class="blog-image"
+              style="
+                background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1600');
+              "
+            ></div>
+            <div class="blog-content">
+              <p class="blog-meta">Wine · Cellar</p>
+              <h3>Building our perfect wine list</h3>
+              <p>
+                From bold reds to crisp whites, here is how we choose bottles
+                that pair with every dish.
+              </p>
+              <a href="#" class="text-link">Read more →</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div
+              class="blog-image"
+              style="
+                background-image: url('https://images.pexels.com/photos/3535383/pexels-photo-3535383.jpeg?auto=compress&cs=tinysrgb&w=1600');
+              "
+            ></div>
+            <div class="blog-content">
+              <p class="blog-meta">Behind the Scenes</p>
+              <h3>A night in the Ambiance kitchen</h3>
+              <p>
+                Take a look behind the pass and see how service runs on a busy
+                Saturday night.
+              </p>
+              <a href="#" class="text-link">Read more →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section id="reservations" class="section reservations-section">
+      <div class="container reservations-grid">
+        <div class="reservations-text">
+          <h2 class="section-title">Happy Dining</h2>
+          <p class="section-subtitle">Make a reservation</p>
+          <p>
+            Whether it is an intimate dinner for two or a celebration with
+            friends, we will make sure your evening feels special from the first
+            hello to the last dessert.
+          </p>
+          <ul class="reservations-info">
+            <li>Open Tuesday – Sunday from 5.30pm</li>
+            <li>Groups up to 10 guests via online bookings</li>
+            <li>For larger events, please contact us directly</li>
+          </ul>
+        </div>
+
+        <div class="reservations-form-wrapper">
+          <form class="reservations-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-name">Name</label>
+                <input
+                  type="text"
+                  id="res-name"
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="res-email">Email</label>
+                <input
+                  type="email"
+                  id="res-email"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-date">Date</label>
+                <input type="date" id="res-date" required />
+              </div>
+              <div class="form-group">
+                <label for="res-time">Time</label>
+                <input type="time" id="res-time" required />
+              </div>
+              <div class="form-group">
+                <label for="res-guests">Guests</label>
+                <select id="res-guests" required>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5 Guests</option>
+                  <option value="6">6 Guests</option>
+                  <option value="7">7 Guests</option>
+                  <option value="8">8+ Guests</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="res-message">Message (optional)</label>
+              <textarea
+                id="res-message"
+                rows="3"
+                placeholder="Occasion, dietary notes, etc."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-light btn-block">
+              Request Booking
+            </button>
+            <p class="form-note">We will confirm your reservation by email.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-title">Impressions</h2>
+          <p class="section-subtitle">Pics & photos</p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Use your own images -->
+          <div
+            class="gallery-item"
+            style="
+              background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            "
+          ></div>
+          <div
+            class="gallery-item"
+            style="
+              background-image: url('https://images.pexels.com/photos/3535383/pexels-photo-3535383.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            "
+          ></div>
+          <div
+            class="gallery-item"
+            style="
+              background-image: url('https://images.pexels.com/photos/3298637/pexels-photo-3298637.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            "
+          ></div>
+          <div
+            class="gallery-item"
+            style="
+              background-image: url('https://images.pexels.com/photos/958546/pexels-photo-958546.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            "
+          ></div>
+          <div
+            class="gallery-item"
+            style="
+              background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1600&dpr=2');
+            "
+          ></div>
+          <div
+            class="gallery-item"
+            style="
+              background-image: url('https://images.pexels.com/photos/3535393/pexels-photo-3535393.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            "
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
+        <div class="contact-text">
+          <h2 class="section-title">Get in touch</h2>
+          <p class="section-subtitle">Leave us a message</p>
+          <p>
+            123 Ambiance Lane, City Centre<br />
+            Open Tuesday – Sunday from 5.30pm
+          </p>
+          <p>
+            Phone: <a href="tel:+61123456789">+61 123 456 789</a><br />
+            Email:
+            <a href="mailto:hello@ambiance-restaurant.com"
+              >hello@ambiance-restaurant.com</a
+            >
+          </p>
+          <p>
+            Follow us on Instagram &amp; Facebook for the latest menu updates
+            and events.
+          </p>
+        </div>
+
+        <div class="contact-map">
+          <!-- Replace src with your own map embed if you like -->
+          <iframe
+            title="Map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.338333932997!2d151.204!3d-33.8688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3e16c1!2sSydney%20CBD!5e0!3m2!1sen!2sau!4v1700000000000"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          © <span id="year"></span> Ambiance Restaurant. All rights reserved.
+        </p>
+        <p>Designed for demo purposes – replace with your own branding.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

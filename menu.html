@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menya Makoto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">Ambiance</span>
+        </div>
+        <nav class="main-nav2">
+          <ul id="navigation">
+            <!-- <li><a href="#hero" class="nav-link active">Home</a></li> -->
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="menu.html" class="nav-link">Menu</a></li>
+            <li>
+              <a href="reservations.html" class="nav-link">Reservations</a>
+            </li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section menu-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="section-title">Our Delicious Dishes</h2>
+          <p class="section-subtitle">Dishes & drinks</p>
+        </div>
+
+        <div class="menu-tabs">
+          <button class="menu-tab active" data-menu="starters">Starters</button>
+          <button class="menu-tab" data-menu="mains">Mains</button>
+          <button class="menu-tab" data-menu="desserts">Desserts</button>
+          <button class="menu-tab" data-menu="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-columns">
+          <!-- Starters -->
+          <div class="menu-list active" id="menu-starters">
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Burrata & Heirloom Tomatoes</h3>
+                <span class="menu-price">$22</span>
+              </div>
+              <p class="menu-desc">
+                Extra virgin olive oil, basil, toasted sourdough.
+              </p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Seared Scallops</h3>
+                <span class="menu-price">$26</span>
+              </div>
+              <p class="menu-desc">Cauliflower purée, brown butter, capers.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Truffle Fries</h3>
+                <span class="menu-price">$16</span>
+              </div>
+              <p class="menu-desc">Parmesan, truffle oil, house aioli.</p>
+            </div>
+          </div>
+
+          <!-- Mains -->
+          <div class="menu-list" id="menu-mains">
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Dry-Aged Ribeye</h3>
+                <span class="menu-price">$49</span>
+              </div>
+              <p class="menu-desc">Charred onions, jus, hand-cut chips.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Crispy Skin Salmon</h3>
+                <span class="menu-price">$38</span>
+              </div>
+              <p class="menu-desc">
+                Lemon beurre blanc, greens, crushed potatoes.
+              </p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Wild Mushroom Risotto</h3>
+                <span class="menu-price">$34</span>
+              </div>
+              <p class="menu-desc">Parmesan, thyme, white wine.</p>
+            </div>
+          </div>
+
+          <!-- Desserts -->
+          <div class="menu-list" id="menu-desserts">
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Chocolate Fondant</h3>
+                <span class="menu-price">$18</span>
+              </div>
+              <p class="menu-desc">Vanilla bean ice-cream, hazelnut crumb.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Crème Brûlée</h3>
+                <span class="menu-price">$17</span>
+              </div>
+              <p class="menu-desc">Classic vanilla, brittle caramel top.</p>
+            </div>
+          </div>
+
+          <!-- Drinks -->
+          <div class="menu-list" id="menu-drinks">
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>House Spritz</h3>
+                <span class="menu-price">$16</span>
+              </div>
+              <p class="menu-desc">Aperitif, prosecco, soda, citrus.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Signature Negroni</h3>
+                <span class="menu-price">$19</span>
+              </div>
+              <p class="menu-desc">Gin, vermouth, bitters, orange.</p>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3>Sommelier’s Wine Selection</h3>
+                <span class="menu-price">From $14</span>
+              </div>
+              <p class="menu-desc">
+                Rotating list of local & international wines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          © <span id="year"></span> Ambiance Restaurant. All rights reserved.
+        </p>
+        <p>Designed for demo purposes – replace with your own branding.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

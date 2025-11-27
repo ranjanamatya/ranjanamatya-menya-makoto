@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menya Makoto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">Ambiance</span>
+        </div>
+        <nav class="main-nav2">
+          <ul id="navigation">
+            <!-- <li><a href="#hero" class="nav-link active">Home</a></li> -->
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="menu.html" class="nav-link">Menu</a></li>
+            <li>
+              <a href="reservations.html" class="nav-link">Reservations</a>
+            </li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Reservations Section -->
+    <section id="reservations" class="section reservations-section">
+      <div class="container reservations-grid">
+        <div class="reservations-text">
+          <h2 class="section-title">Happy Dining</h2>
+          <p class="section-subtitle">Make a reservation</p>
+          <p>
+            Whether it is an intimate dinner for two or a celebration with
+            friends, we will make sure your evening feels special from the first
+            hello to the last dessert.
+          </p>
+          <ul class="reservations-info">
+            <li>Open Tuesday – Sunday from 5.30pm</li>
+            <li>Groups up to 10 guests via online bookings</li>
+            <li>For larger events, please contact us directly</li>
+          </ul>
+        </div>
+
+        <div class="reservations-form-wrapper">
+          <form class="reservations-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-name">Name</label>
+                <input
+                  type="text"
+                  id="res-name"
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="res-email">Email</label>
+                <input
+                  type="email"
+                  id="res-email"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-date">Date</label>
+                <input type="date" id="res-date" required />
+              </div>
+              <div class="form-group">
+                <label for="res-time">Time</label>
+                <input type="time" id="res-time" required />
+              </div>
+              <div class="form-group">
+                <label for="res-guests">Guests</label>
+                <select id="res-guests" required>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5 Guests</option>
+                  <option value="6">6 Guests</option>
+                  <option value="7">7 Guests</option>
+                  <option value="8">8+ Guests</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="res-message">Message (optional)</label>
+              <textarea
+                id="res-message"
+                rows="3"
+                placeholder="Occasion, dietary notes, etc."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-light btn-block">
+              Request Booking
+            </button>
+            <p class="form-note">We will confirm your reservation by email.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          © <span id="year"></span> Ambiance Restaurant. All rights reserved.
+        </p>
+        <p>Designed for demo purposes – replace with your own branding.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
