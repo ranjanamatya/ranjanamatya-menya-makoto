@@ -200,9 +200,10 @@ body.home .main-nav ul li a:hover, body.home .main-nav ul li a.active {
 }
 @media (max-width: 767px) {
   .inner-pages .main-nav {
-    padding: 55px 15px;
-    background: #6b3c35;
-    background-image: url("images/chef-image.webp");
+    padding: 130px 15px 50px 15px;
+    background-image: url("../images/chef-image.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: fixed;
     right: -100%;
     height: 100vh;
@@ -213,6 +214,18 @@ body.home .main-nav ul li a:hover, body.home .main-nav ul li a.active {
     display: block;
     overflow-y: auto;
     overflow-x: hidden;
+    background-position: center bottom;
+  }
+}
+@media (max-width: 767px) {
+  .inner-pages .main-nav:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.31);
+    width: 100%;
+    height: 100%;
   }
 }
 .inner-pages .main-nav ul {
@@ -227,6 +240,8 @@ body.home .main-nav ul li a:hover, body.home .main-nav ul li a.active {
     padding: 0;
     margin: 0;
     justify-content: center;
+    position: relative;
+    z-index: 1;
   }
 }
 .inner-pages .main-nav ul li {
