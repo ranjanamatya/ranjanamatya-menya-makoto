@@ -180,6 +180,11 @@ body.home .main-nav ul li a {
 body.home .main-nav ul li a:hover {
   transform: scale(1.3);
 }
+@media (min-width: 767px) {
+  body.home .main-nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
 body.home .main-nav ul li a:hover, body.home .main-nav ul li a.active {
   color: #fff;
 }

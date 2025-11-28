@@ -201,7 +201,9 @@ body.home .main-nav {
 
         // }
         &:hover {
-          // background: rgba(0, 0, 0, 0.5);
+          @media (min-width: 767px) {
+            background: rgba(0, 0, 0, 0.5);
+          }
           transform: scale(1.3);
         }
 
