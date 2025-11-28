@@ -10,31 +10,32 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="inner-pages">
     <!-- Header / Navigation -->
     <header class="site-header">
       <div class="header-inner">
         <div class="logo">
-          <span class="logo-mark">A</span>
-          <span class="logo-text">Ambiance</span>
+          <a href="#"> <img src="images/logo-ab.png" alt="main-logo" /> </a>
         </div>
-        <nav class="main-nav2">
+        <nav class="main-nav">
           <ul id="navigation">
             <!-- <li><a href="#hero" class="nav-link active">Home</a></li> -->
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
             <li><a href="menu.html" class="nav-link">Menu</a></li>
             <li>
-              <a href="reservations.html" class="nav-link">Reservations</a>
+              <a href="reservations.html" class="nav-link">Book Now</a>
             </li>
             <li><a href="gallery.html" class="nav-link">Gallery</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </nav>
 
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
+        <div class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
 
@@ -57,7 +58,7 @@
         </div>
 
         <div class="reservations-form-wrapper">
-          <form class="reservations-form">
+          <!-- <form class="reservations-form">
             <div class="form-row">
               <div class="form-group">
                 <label for="res-name">Name</label>
@@ -115,7 +116,19 @@
               Request Booking
             </button>
             <p class="form-note">We will confirm your reservation by email.</p>
-          </form>
+          </form> -->
+          <!-- <iframe
+            data-id="nbi-widget"
+            src="https://bookings.nowbookit.com?accountid=d28913a4-935a-471e-a35d-3f6598bb5ac0&venueid=552&theme=light&colors=hex,000000&font=Oxygen"
+          ></iframe>
+          <script src="https://plugins.nowbookit.com/iframe-resizer-build/bundle.js"></script> -->
+
+          <iframe
+            data-id="nbi-widget"
+            src="https://bookings.nowbookit.com/?accountid=1e257390-dab7-470a-a5e6-c6b77c4ef52e&venueid=14177&theme=light&colors=hex,b0120a,000000&banner=hidden&bg=transparent"
+          ></iframe>
+
+          <script src="https://plugins.nowbookit.com/iframe-resizer-build/bundle.js"></script>
         </div>
       </div>
     </section>
@@ -123,10 +136,7 @@
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>
-          © <span id="year"></span> Ambiance Restaurant. All rights reserved.
-        </p>
-        <p>Designed for demo purposes – replace with your own branding.</p>
+        <p>© <span id="year"></span> Menya Makoto. All rights reserved.</p>
       </div>
     </footer>
 

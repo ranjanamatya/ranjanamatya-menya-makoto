@@ -10,9 +10,74 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="home">
     <!-- Header / Navigation -->
     <header class="site-header">
+      <!-- <div id="hero" class="hero-section">
+        <div class="hero-slider">
+          <div
+            class="hero-slide active"
+            style="
+              background-image: url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            "q
+          ></div>
+          <div
+            class="hero-slide"
+            style="
+              background-image: url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1600&dpr=2');
+            "
+          ></div>
+          <div
+            class="hero-slide"
+            style="
+              background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            "
+          ></div>
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-scroll-indicator">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div> -->
+      <!-- ...... -->
+
+      <div id="hero" class="hero-section">
+        <div class="hero-slider">
+          <!-- VIDEO SLIDE 1 -->
+          <div class="hero-slide hero-slide--video">
+            <video
+              class="hero-video"
+              autoplay
+              muted
+              loop
+              playsinline
+              poster="images/video-poster.jpg"
+            >
+              <source src="videos/video-1.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <!-- IMAGE SLIDE 2 -->
+          <!-- <div
+            class="hero-slide hero-slide--image"
+            style="
+              background-image: url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            "
+          ></div> -->
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-scroll-indicator">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+
+      <!-- .... -->
+
       <div class="header-inner">
         <div class="logo">
           <a href="#"> <img src="images/logo-ab.png" alt="main-logo" /> </a>
@@ -22,58 +87,24 @@
             <li><a href="about.html" class="nav-link">About</a></li>
             <li><a href="menu.html" class="nav-link">Menu</a></li>
             <li>
-              <a href="reservations.html" class="nav-link">Reservations</a>
+              <a href="reservations.html" class="nav-link">Book Now</a>
             </li>
             <li><a href="gallery.html" class="nav-link">Gallery</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </nav>
-
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
+        <div class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
-
-    <!-- Hero / Slider -->
-    <section id="hero" class="hero-section">
-      <div class="hero-slider">
-        <!-- Use your own images here -->
-        <div
-          class="hero-slide active"
-          style="
-            background-image: url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1600');
-          "
-        ></div>
-        <div
-          class="hero-slide"
-          style="
-            background-image: url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1600&dpr=2');
-          "
-        ></div>
-        <div
-          class="hero-slide"
-          style="
-            background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1600');
-          "
-        ></div>
-      </div>
-
-      <div class="hero-overlay"></div>
-
-      <div class="hero-scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
 
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>
-          © <span id="year"></span> Ambiance Restaurant. All rights reserved.
-        </p>
-        <p>Designed for demo purposes – replace with your own branding.</p>
+        <p>© <span id="year"></span> Menya Makoto. All rights reserved.</p>
       </div>
     </footer>
 

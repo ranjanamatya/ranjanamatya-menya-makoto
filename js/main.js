@@ -1,19 +1,19 @@
 // Simple hero slider
-const slides = document.querySelectorAll(".hero-slide");
-let currentSlide = 0;
+// const slides = document.querySelectorAll(".hero-slide");
+// let currentSlide = 0;
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle("active", i === index);
-  });
-}
+// function showSlide(index) {
+//   slides.forEach((slide, i) => {
+//     slide.classList.toggle("active", i === index);
+//   });
+// }
 
-if (slides.length > 0) {
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }, 6000); // 6 seconds
-}
+// if (slides.length > 0) {
+//   setInterval(() => {
+//     currentSlide = (currentSlide + 1) % slides.length;
+//     showSlide(currentSlide);
+//   }, 6000); // 6 seconds
+// }
 
 // Smooth scrolling for nav links
 const navLinks = document.querySelectorAll(".nav-link");
@@ -68,8 +68,8 @@ window.addEventListener("scroll", updateActiveNav);
 window.addEventListener("load", updateActiveNav);
 
 // Mobile nav toggle
-const navToggle = document.querySelector(".nav-toggle");
-const mainNav = document.querySelector(".main-nav");
+const navToggle = document.querySelector(".hamburger");
+const mainNav = document.querySelector("body.inner-pages");
 
 if (navToggle) {
   navToggle.addEventListener("click", () => {
@@ -111,31 +111,90 @@ if (reservationsForm) {
 }
 
 /* ... */
-
 const navStrip = document.getElementById("navigation");
 
-// Horizontal movement based on mouse X
+// ---- DESKTOP MOUSE SCROLL (min-width: 767px) ----
 function updateNavPosition(e) {
+  if (window.innerWidth < 767) return; // desktop only
+
   const viewportWidth = window.innerWidth;
   const stripWidth = navStrip.scrollWidth;
 
-  const extra = stripWidth - viewportWidth; // how much wider than screen
+  const extra = stripWidth - viewportWidth;
   if (extra <= 0) {
     navStrip.style.transform = "translateX(0)";
     return;
   }
 
   const mouseX = e.clientX;
-  const percent = mouseX / viewportWidth; // 0 (left) -> 1 (right)
-  const offset = -extra * percent; // move strip to left when mouse right
+  const percent = mouseX / viewportWidth;
+  const offset = -extra * percent;
 
   navStrip.style.transform = `translateX(${offset}px)`;
 }
 
 window.addEventListener("mousemove", updateNavPosition);
+
+// ---- TOUCH SCROLL FOR TABLETS (iPad etc.) ----
+let touchStartX = 0;
+let currentOffset = 0;
+
+navStrip.addEventListener("touchstart", function (e) {
+  if (window.innerWidth < 767) return; // ignore mobile
+
+  touchStartX = e.touches[0].clientX;
+});
+
+navStrip.addEventListener("touchmove", function (e) {
+  if (window.innerWidth < 767) return; // ignore mobile
+
+  const viewportWidth = window.innerWidth;
+  const stripWidth = navStrip.scrollWidth;
+
+  const extra = stripWidth - viewportWidth;
+  if (extra <= 0) return;
+
+  const touchX = e.touches[0].clientX;
+  const delta = touchStartX - touchX; // movement amount
+
+  // Calculate new offset
+  currentOffset = Math.min(0, Math.max(-extra, currentOffset - delta));
+
+  navStrip.style.transform = `translateX(${currentOffset}px)`;
+
+  touchStartX = touchX; // update for next frame
+});
+
+// Reset when changing screen size
 window.addEventListener("resize", () => {
   navStrip.style.transform = "translateX(0)";
+  currentOffset = 0;
 });
+
+// const navStrip = document.getElementById("navigation");
+
+// // Horizontal movement based on mouse X
+// function updateNavPosition(e) {
+//   const viewportWidth = window.innerWidth;
+//   const stripWidth = navStrip.scrollWidth;
+
+//   const extra = stripWidth - viewportWidth; // how much wider than screen
+//   if (extra <= 0) {
+//     navStrip.style.transform = "translateX(0)";
+//     return;
+//   }
+
+//   const mouseX = e.clientX;
+//   const percent = mouseX / viewportWidth; // 0 (left) -> 1 (right)
+//   const offset = -extra * percent; // move strip to left when mouse right
+
+//   navStrip.style.transform = `translateX(${offset}px)`;
+// }
+
+// window.addEventListener("mousemove", updateNavPosition);
+// window.addEventListener("resize", () => {
+//   navStrip.style.transform = "translateX(0)";
+// });
 
 /* ... */
 // document.addEventListener("DOMContentLoaded", function () {
